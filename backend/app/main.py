@@ -12,3 +12,7 @@ def root():
 @app.get("/health")
 def health():
     return {"status": "ok"}
+
+@app.get("/hello/{name}")
+def hello(name: str):
+    return {"message": f"Welcome to PacerAI, {name}!"}
