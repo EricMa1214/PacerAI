@@ -36,7 +36,7 @@ def create_run(run: RunCreate):
     return {"message": "Run logged!", "data": response.data}
 
 
-# --- Get all runs ---
+# --- Get runs ---
 @app.get("/runs")
 def get_runs():
     response = supabase.table("runs").select("*").order("run_date", desc=True).execute()
